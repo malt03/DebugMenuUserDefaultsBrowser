@@ -24,7 +24,7 @@ You can browse UserDefaults values with DebugHead.
   s.homepage         = 'https://github.com/malt03/DebugMenuUserDefaultsBrowser'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'Koji Murata' => 'koji.murata@dena.com' }
+  s.author           = { 'Koji Murata' => 'malt.koji@gmail.com' }
   s.source           = { :git => 'https://github.com/malt03/DebugMenuUserDefaultsBrowser.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
