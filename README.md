@@ -1,7 +1,7 @@
 # DebugMenuUserDefaultsBrowser
 
-This pod was created with [TAKKitSwift](https://cocoapods.org/pods/TAKKitSwift)
-I am respecting Takahiro Ooishi
+This pod was created with [TAKKitSwift](https://cocoapods.org/pods/TAKKitSwift).
+I am respecting Takahiro Ooishi.
 
 [![Platform](https://img.shields.io/cocoapods/p/DebugMenuUserDefaultsBrowser.svg?style=flat)](http://cocoapods.org/pods/DebugMenuUserDefaultsBrowser)
 ![Language](https://img.shields.io/badge/language-Swift%202.2-orange.svg)
