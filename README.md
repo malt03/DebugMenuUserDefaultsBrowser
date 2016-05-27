@@ -1,15 +1,22 @@
 # DebugMenuUserDefaultsBrowser
 
-[![CI Status](http://img.shields.io/travis/Koji Murata/DebugMenuUserDefaultsBrowser.svg?style=flat)](https://travis-ci.org/Koji Murata/DebugMenuUserDefaultsBrowser)
-[![Version](https://img.shields.io/cocoapods/v/DebugMenuUserDefaultsBrowser.svg?style=flat)](http://cocoapods.org/pods/DebugMenuUserDefaultsBrowser)
-[![License](https://img.shields.io/cocoapods/l/DebugMenuUserDefaultsBrowser.svg?style=flat)](http://cocoapods.org/pods/DebugMenuUserDefaultsBrowser)
 [![Platform](https://img.shields.io/cocoapods/p/DebugMenuUserDefaultsBrowser.svg?style=flat)](http://cocoapods.org/pods/DebugMenuUserDefaultsBrowser)
+![Language](https://img.shields.io/badge/language-Swift%202.2-orange.svg)
+[![CocoaPods](https://img.shields.io/cocoapods/v/DebugMenuUserDefaultsBrowser.svg?style=flat)](http://cocoapods.org/pods/DebugMenuUserDefaultsBrowser)
+![License](https://img.shields.io/github/license/malt03/DebugMenuUserDefaultsBrowser.svg?style=flat)
 
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
-## Requirements
+## Usage
+
+```swift
+func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+  DebugHead.sharedInstance.prepare(menuClasses: [DebugMenuUserDefaultsBrowserViewController.self])
+  return true
+}
+```
 
 ## Installation
 
