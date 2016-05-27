@@ -1,0 +1,6 @@
+framework module TAKKitSwift {
+  umbrella header "TAKKitSwift-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,6 @@
+framework module DebugMenuUserDefaultsBrowser {
+  umbrella header "DebugMenuUserDefaultsBrowser-umbrella.h"
+
+  export *
+  module * { export * }
+}

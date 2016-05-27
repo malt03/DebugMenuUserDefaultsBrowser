@@ -1,0 +1,6 @@
+framework module Pods_DebugMenuUserDefaultsBrowser_Tests {
+  umbrella header "Pods-DebugMenuUserDefaultsBrowser_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}
