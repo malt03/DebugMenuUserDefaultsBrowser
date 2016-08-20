@@ -1,6 +1,9 @@
 use_frameworks!
 
 target 'DebugMenuUserDefaultsBrowser_Example' do
+  pod 'TAKKitSwift', git: 'https://github.com/taka0125/TAKKitSwift.git', branch: 'swift-3.0'
+  pod 'BugImageCreator', git: 'https://github.com/malt03/BugImageCreator.git', tag: '0.4.0-beta1'
+  pod 'DebugHead', git: 'https://github.com/malt03/DebugHead.git', tag: '0.2.0-beta1'
   pod 'DebugMenuUserDefaultsBrowser', :path => '../'
 
   target 'DebugMenuUserDefaultsBrowser_Tests' do

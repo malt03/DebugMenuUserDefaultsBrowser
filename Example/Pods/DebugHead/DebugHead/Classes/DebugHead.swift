@@ -7,21 +7,20 @@
 //
 
 import UIKit
+import BugImageCreator
 
-public class DebugHead: UIView {
-  public static let sharedInstance = DebugHead.instance()
+open class DebugHead: BugImageView {
+  open static let sharedInstance = DebugHead.instance()
 
-  public func prepare(
+  open func prepare(
     menuClasses m: [DebugMenu.Type],
-    center c: CGPoint = CGPoint(x: UIScreen.mainScreen().bounds.size.width - 50, y: UIScreen.mainScreen().bounds.size.height - 50),
+    center c: CGPoint = CGPoint(x: UIScreen.main.bounds.size.width - 50, y: UIScreen.main.bounds.size.height - 50),
     sorting: Bool = true,
     footerView fv: UIView? = nil
   ) {
-    NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(addSubviewOnKeyWindow), name: UIWindowDidBecomeKeyNotification, object: nil)
-    
     center = c
-    layer.borderColor = UIColor.whiteColor().CGColor
-    layer.borderWidth = 1
+    let screenSize = UIScreen.main.bounds.size
+    ratioCenter = CGPoint(x: center.x / screenSize.width, y: center.y / screenSize.height)
     
     let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(panned(_:)))
     let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(tapped(_:)))
@@ -32,53 +31,75 @@ public class DebugHead: UIView {
     footerView = fv
     
     if sorting {
-      menuClasses.sortInPlace { $0.debugMenuDangerLevel.rawValue < $1.debugMenuDangerLevel.rawValue }
+      menuClasses.sort { $0.debugMenuDangerLevel.rawValue < $1.debugMenuDangerLevel.rawValue }
     }
   }
   
-  private override init(frame: CGRect) {
-    super.init(frame: frame)
+  init() {
+    super.init(frame: CGRect(origin: .zero, size: CGSize(width: 30, height: 30)))
+    bugSize = 20
+    bugColor = .white
+    bugLineWidth = 1
+    backgroundColor = .darkGray
+    layer.cornerRadius = 4
+    layer.masksToBounds = true
+    layer.borderColor = UIColor.white.cgColor
+    layer.borderWidth = 1
+    NotificationCenter.default.addObserver(self, selector: #selector(addSubviewOnKeyWindow), name: NSNotification.Name.UIWindowDidBecomeKey, object: nil)
+    NotificationCenter.default.addObserver(self, selector: #selector(orientationDidChange), name: NSNotification.Name.UIDeviceOrientationDidChange, object: nil)
+  }
+  
+  deinit {
+    NotificationCenter.default.removeObserver(self)
   }
   
   required public init?(coder aDecoder: NSCoder) {
-    super.init(coder: aDecoder)
+    fatalError("init(coder:) has not been implemented")
   }
   
-  private static func instance() -> DebugHead {
-    return UINib(nibName: "DebugHead", bundle: bundle).instantiateWithOwner(self, options: nil).first as! DebugHead
+  fileprivate static func instance() -> DebugHead {
+    return DebugHead()
   }
   
-  private static var bundle: NSBundle {
-    return NSBundle(path: NSBundle(forClass: DebugHead.self).pathForResource("DebugHead", ofType: "bundle")!)!
+  fileprivate static var bundle: Bundle {
+    return Bundle(path: Bundle(for: DebugHead.self).path(forResource: "DebugHead", ofType: "bundle")!)!
   }
 
-  private var menuClasses = [DebugMenu.Type]()
-  private var footerView: UIView?
+  fileprivate var menuClasses = [DebugMenu.Type]()
+  fileprivate var footerView: UIView?
+  fileprivate var ratioCenter = CGPoint.zero
   
-  private var keyWindow: UIWindow? {
-    return UIApplication.sharedApplication().keyWindow
+  fileprivate var keyWindow: UIWindow? {
+    return UIApplication.shared.keyWindow
   }
   
-  @objc private func panned(recognizer: UIPanGestureRecognizer) {
-    frame.origin.x += recognizer.translationInView(self).x
-    frame.origin.y += recognizer.translationInView(self).y
-    recognizer.setTranslation(.zero, inView: self)
+  @objc fileprivate func panned(_ recognizer: UIPanGestureRecognizer) {
+    frame.origin.x += recognizer.translation(in: self).x
+    frame.origin.y += recognizer.translation(in: self).y
+    recognizer.setTranslation(.zero, in: self)
+    let screenSize = UIScreen.main.bounds.size
+    ratioCenter = CGPoint(x: center.x / screenSize.width, y: center.y / screenSize.height)
   }
   
-  @objc private func tapped(recognizer: UITapGestureRecognizer) {
+  @objc fileprivate func tapped(_ recognizer: UITapGestureRecognizer) {
     let nc = UIStoryboard(name: "DebugMenu", bundle: DebugHead.bundle).instantiateInitialViewController() as! UINavigationController
     let vc = nc.topViewController as! DebugMenuTableViewController
     vc.prepare(menuClasses, footerView)
-    findTopViewController(keyWindow?.rootViewController)?.presentViewController(nc, animated: true, completion: nil)
-    UIView.animateWithDuration(0.3) { self.alpha = 0 }
+    findTopViewController(keyWindow?.rootViewController)?.present(nc, animated: true, completion: nil)
+    UIView.animate(withDuration: 0.3) { self.alpha = 0 }
   }
   
-  @objc private func addSubviewOnKeyWindow() {
+  @objc fileprivate func addSubviewOnKeyWindow() {
     removeFromSuperview()
     keyWindow?.addSubview(self)
   }
+    
+  @objc fileprivate func orientationDidChange() {
+    let screenSize = UIScreen.main.bounds.size
+    center = CGPoint(x: screenSize.width * ratioCenter.x, y: screenSize.height * ratioCenter.y)
+  }
   
-  private func findTopViewController(controller: UIViewController?) -> UIViewController? {
+  fileprivate func findTopViewController(_ controller: UIViewController?) -> UIViewController? {
     guard let c = controller else { return nil }
     
     switch c {

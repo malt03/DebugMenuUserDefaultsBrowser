@@ -1,9 +1,9 @@
 {
   "name": "DebugMenuUserDefaultsBrowser",
   "version": "0.1.0",
-  "summary": "A short description of DebugMenuUserDefaultsBrowser.",
-  "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/<GITHUB_USERNAME>/DebugMenuUserDefaultsBrowser",
+  "summary": "Easy to browse UserDefaults values.",
+  "description": "You can browse UserDefaults values with DebugHead.",
+  "homepage": "https://github.com/malt03/DebugMenuUserDefaultsBrowser",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -12,7 +12,7 @@
     "Koji Murata": "malt.koji@gmail.com"
   },
   "source": {
-    "git": "https://github.com/<GITHUB_USERNAME>/DebugMenuUserDefaultsBrowser.git",
+    "git": "https://github.com/malt03/DebugMenuUserDefaultsBrowser.git",
     "tag": "0.1.0"
   },
   "platforms": {
@@ -21,10 +21,10 @@
   "source_files": "DebugMenuUserDefaultsBrowser/Classes/**/*",
   "dependencies": {
     "TAKKitSwift": [
-      "~> 2.3.0"
+      "~> 3.0.0"
     ],
     "DebugHead": [
-      "~> 0.1.0"
+      "~> 0.2.0-beta1"
     ]
   }
 }
