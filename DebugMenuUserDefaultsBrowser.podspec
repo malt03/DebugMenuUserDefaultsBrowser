@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'DebugMenuUserDefaultsBrowser'
-  s.version          = '0.2.0-beta1'
+  s.version          = '0.2.0'
   s.summary          = 'Easy to browse UserDefaults values.'
 
 # This description is used to generate tags and improve search results.
