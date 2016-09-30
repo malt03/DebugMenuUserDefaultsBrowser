@@ -84,12 +84,14 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "$BUILT_PRODUCTS_DIR/BugImageCreator/BugImageCreator.framework"
   install_framework "$BUILT_PRODUCTS_DIR/DebugHead/DebugHead.framework"
   install_framework "$BUILT_PRODUCTS_DIR/DebugMenuUserDefaultsBrowser/DebugMenuUserDefaultsBrowser.framework"
   install_framework "$BUILT_PRODUCTS_DIR/STTwitter/STTwitter.framework"
   install_framework "$BUILT_PRODUCTS_DIR/TAKKitSwift/TAKKitSwift.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "$BUILT_PRODUCTS_DIR/BugImageCreator/BugImageCreator.framework"
   install_framework "$BUILT_PRODUCTS_DIR/DebugHead/DebugHead.framework"
   install_framework "$BUILT_PRODUCTS_DIR/DebugMenuUserDefaultsBrowser/DebugMenuUserDefaultsBrowser.framework"
   install_framework "$BUILT_PRODUCTS_DIR/STTwitter/STTwitter.framework"

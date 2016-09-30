@@ -194,6 +194,10 @@ static NSDateFormatter *dateFormatter = nil;
     return [self twitterAPIAppOnlyWithConsumerName:nil consumerKey:consumerKey consumerSecret:consumerSecret];
 }
 
+- (void)setSharedContainerIdentifier:(NSString *)s {
+    [[NSUserDefaults standardUserDefaults] setValue:s forKey:@"STTwitterSharedContainerIdentifier"];
+}
+
 - (void)setTimeoutInSeconds:(NSTimeInterval)timeoutInSeconds {
     _oauth.timeoutInSeconds = timeoutInSeconds;
 }
@@ -631,6 +635,7 @@ authenticateInsteadOfAuthorize:authenticateInsteadOfAuthorize
                               NSString *imageURLString = [response objectForKey:@"profile_image_url"];
                               
                               STHTTPRequest *r = [STHTTPRequest requestWithURLString:imageURLString];
+                              r.sharedContainerIdentifier = [[NSUserDefaults standardUserDefaults] valueForKey:@"STTwitterSharedContainerIdentifier"];
                               __weak STHTTPRequest *wr = r;
                               
                               r.timeoutSeconds = strongSelf.oauth.timeoutInSeconds;
@@ -2278,7 +2283,7 @@ authenticateInsteadOfAuthorize:authenticateInsteadOfAuthorize
     NSMutableDictionary *md = [NSMutableDictionary dictionary];
     if(includeEntities) md[@"include_entities"] = [includeEntities boolValue] ? @"1" : @"0";
     if(skipStatus) md[@"skip_status"] = [skipStatus boolValue] ? @"1" : @"0";
-    if(includeEmail) md[@"include_email"] = [includeEmail boolValue] ? @"1" : @"0";
+    if(includeEmail) md[@"include_email"] = [includeEmail boolValue] ? @"true" : @"false";
     
     return [self getAPIResource:@"account/verify_credentials.json" parameters:md successBlock:^(NSDictionary *rateLimits, id response) {
         successBlock(response);
