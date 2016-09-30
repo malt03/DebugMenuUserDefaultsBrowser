@@ -1301,13 +1301,15 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		0CE4A7F12607778BB9155660163D339B /* Release */ = {
+		0DDD0E7CA985EB4A849F553297DD87B5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 19B458A0204A27B696698F880E62C13E /* TAKKitSwift.xcconfig */;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -1320,52 +1322,25 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/TAKKitSwift/TAKKitSwift.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = TAKKitSwift;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
-		2311BD59AE8E0972A3F07C198E9EF595 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 82EC9496AEB81DD6C85553026F6C78C9 /* BugImageCreator.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/BugImageCreator/BugImageCreator-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/BugImageCreator/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/BugImageCreator/BugImageCreator.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = BugImageCreator;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		293B8AD53702600ABF50BB9A1BC7C331 /* Release */ = {
+		1E9C56EA483B2737A226F9F38A16F39A /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 05E2E157D409D5972C3404D1421BBD11 /* DebugMenuUserDefaultsBrowser.xcconfig */;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
@@ -1391,11 +1366,132 @@
 			};
 			name = Release;
 		};
-		37F4C9AEB4A9BAF1D5541596BF1648FC /* Debug */ = {
+		2A7914C65B8C94070BEB18836A03B223 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EAA915BCC40F997BEF956A39A0F212D8 /* STTwitter.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/STTwitter/STTwitter-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/STTwitter/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/STTwitter/STTwitter.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = STTwitter;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		2BAE427012A0E5887540D2A55CCA62C2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8CF17F22495BC41987A8A792CC7B85FA /* Pods-DebugMenuUserDefaultsBrowser_Tests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-DebugMenuUserDefaultsBrowser_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-DebugMenuUserDefaultsBrowser_Tests/Pods-DebugMenuUserDefaultsBrowser_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_DebugMenuUserDefaultsBrowser_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		4C5F27CC3F8D535B0D6F78393B3AB84F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 37BBB192C2CD4936DFF834AE94C2B53B /* Pods-DebugMenuUserDefaultsBrowser_Tests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-DebugMenuUserDefaultsBrowser_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-DebugMenuUserDefaultsBrowser_Tests/Pods-DebugMenuUserDefaultsBrowser_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_DebugMenuUserDefaultsBrowser_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		55CC5DB64C514E006990E99BC4C3ABE8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 19B458A0204A27B696698F880E62C13E /* TAKKitSwift.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/TAKKitSwift";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/TAKKitSwift/ResourceBundle-TAKUserDefaults-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = TAKUserDefaults;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		6D6564877460FFDD6D8A210374CF9738 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 82EC9496AEB81DD6C85553026F6C78C9 /* BugImageCreator.xcconfig */;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
@@ -1422,11 +1518,65 @@
 			};
 			name = Debug;
 		};
-		3D608DF52A74503F13B3DA7ED39A25A6 /* Release */ = {
+		6ED495E64098F5CCA3DF4A5647A9E6E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 19B458A0204A27B696698F880E62C13E /* TAKKitSwift.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/TAKKitSwift";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/TAKKitSwift/ResourceBundle-TAKUserDefaults-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = TAKUserDefaults;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		6FD1D5B1DCC9BC2B585DAECEA5239187 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3ADFCD29A4779C73FC7B00F8B51C7B67 /* Pods-DebugMenuUserDefaultsBrowser_Example.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-DebugMenuUserDefaultsBrowser_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-DebugMenuUserDefaultsBrowser_Example/Pods-DebugMenuUserDefaultsBrowser_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_DebugMenuUserDefaultsBrowser_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		89C474159D74CC3AA2F89EBF029A4077 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = EAA915BCC40F997BEF956A39A0F212D8 /* STTwitter.xcconfig */;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
@@ -1449,74 +1599,6 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		52A96E3F2B5A2836B33579387662E156 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = F16ACE35C1BC009E0E3E9AEBF0160A08 /* Pods-DebugMenuUserDefaultsBrowser_Example.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-DebugMenuUserDefaultsBrowser_Example/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-DebugMenuUserDefaultsBrowser_Example/Pods-DebugMenuUserDefaultsBrowser_Example.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_DebugMenuUserDefaultsBrowser_Example;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		55CC5DB64C514E006990E99BC4C3ABE8 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 19B458A0204A27B696698F880E62C13E /* TAKKitSwift.xcconfig */;
-			buildSettings = {
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/TAKKitSwift";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/TAKKitSwift/ResourceBundle-TAKUserDefaults-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				PRODUCT_NAME = TAKUserDefaults;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Debug;
-		};
-		6ED495E64098F5CCA3DF4A5647A9E6E6 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 19B458A0204A27B696698F880E62C13E /* TAKKitSwift.xcconfig */;
-			buildSettings = {
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/TAKKitSwift";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/TAKKitSwift/ResourceBundle-TAKUserDefaults-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				PRODUCT_NAME = TAKUserDefaults;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = bundle;
 			};
 			name = Release;
 		};
@@ -1557,6 +1639,38 @@
 				STRIP_INSTALLED_PRODUCT = NO;
 				SYMROOT = "${SRCROOT}/../build";
 				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9A5FDACE47C34D5FC72ED0B518E3B47D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 82EC9496AEB81DD6C85553026F6C78C9 /* BugImageCreator.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/BugImageCreator/BugImageCreator-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/BugImageCreator/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/BugImageCreator/BugImageCreator.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = BugImageCreator;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -1604,11 +1718,13 @@
 			};
 			name = Debug;
 		};
-		A991A3A8CF11EE825D864EA5748A7AC0 /* Debug */ = {
+		A09DA5050EDFB805EE7E5BDAA7C6CE5C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 19B458A0204A27B696698F880E62C13E /* TAKKitSwift.xcconfig */;
+			baseConfigurationReference = F16ACE35C1BC009E0E3E9AEBF0160A08 /* Pods-DebugMenuUserDefaultsBrowser_Example.debug.xcconfig */;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
@@ -1617,107 +1733,34 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/TAKKitSwift/TAKKitSwift-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/TAKKitSwift/Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-DebugMenuUserDefaultsBrowser_Example/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/TAKKitSwift/TAKKitSwift.modulemap";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-DebugMenuUserDefaultsBrowser_Example/Pods-DebugMenuUserDefaultsBrowser_Example.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = TAKKitSwift;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_DebugMenuUserDefaultsBrowser_Example;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		C9DB2523E86008CE8793F7E10ACE9D24 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 15F27B8700DC5ED5A19677FD1964037E /* DebugHead.xcconfig */;
-			buildSettings = {
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/DebugHead";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/DebugHead/ResourceBundle-DebugHead-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				PRODUCT_NAME = DebugHead;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Release;
-		};
-		DCEDE3CDB9CC646ABC77BBDF85D19C4A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = EAA915BCC40F997BEF956A39A0F212D8 /* STTwitter.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/STTwitter/STTwitter-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/STTwitter/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/STTwitter/STTwitter.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = STTwitter;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		DFD17F39D7E1726ABB2280D991D47385 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 15F27B8700DC5ED5A19677FD1964037E /* DebugHead.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/DebugHead/DebugHead-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/DebugHead/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/DebugHead/DebugHead.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = DebugHead;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		E10DD0DFFCF666AC2285A6259EA8AAF5 /* Debug */ = {
+		BC2DD6566A841A61DEE2194EB90778BF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 05E2E157D409D5972C3404D1421BBD11 /* DebugMenuUserDefaultsBrowser.xcconfig */;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
@@ -1744,40 +1787,39 @@
 			};
 			name = Debug;
 		};
-		E15AEFBC9DF0B3C7B05C4E9D7D89EF58 /* Debug */ = {
+		C7ADED5F50ABDF7E4297CBF7D8E5FD51 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 37BBB192C2CD4936DFF834AE94C2B53B /* Pods-DebugMenuUserDefaultsBrowser_Tests.debug.xcconfig */;
+			baseConfigurationReference = 19B458A0204A27B696698F880E62C13E /* TAKKitSwift.xcconfig */;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-DebugMenuUserDefaultsBrowser_Tests/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/TAKKitSwift/TAKKitSwift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/TAKKitSwift/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-DebugMenuUserDefaultsBrowser_Tests/Pods-DebugMenuUserDefaultsBrowser_Tests.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_DebugMenuUserDefaultsBrowser_Tests;
+				MODULEMAP_FILE = "Target Support Files/TAKKitSwift/TAKKitSwift.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = TAKKitSwift;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
-		F20F39F4F688836464A4180179294F7F /* Debug */ = {
+		C9DB2523E86008CE8793F7E10ACE9D24 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 15F27B8700DC5ED5A19677FD1964037E /* DebugHead.xcconfig */;
 			buildSettings = {
@@ -1792,13 +1834,15 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = bundle;
 			};
-			name = Debug;
+			name = Release;
 		};
-		FCA80F0072596B1EABF8A2795EB2DD1C /* Release */ = {
+		E53B8FC5990E996E0DE5D73E659224EF /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 15F27B8700DC5ED5A19677FD1964037E /* DebugHead.xcconfig */;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
@@ -1824,71 +1868,55 @@
 			};
 			name = Release;
 		};
-		FD8B05C6CFFB963D52269468536AAA28 /* Release */ = {
+		F20F39F4F688836464A4180179294F7F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3ADFCD29A4779C73FC7B00F8B51C7B67 /* Pods-DebugMenuUserDefaultsBrowser_Example.release.xcconfig */;
+			baseConfigurationReference = 15F27B8700DC5ED5A19677FD1964037E /* DebugHead.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/DebugHead";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-DebugMenuUserDefaultsBrowser_Example/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-DebugMenuUserDefaultsBrowser_Example/Pods-DebugMenuUserDefaultsBrowser_Example.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_DebugMenuUserDefaultsBrowser_Example;
+				INFOPLIST_FILE = "Target Support Files/DebugHead/ResourceBundle-DebugHead-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = DebugHead;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
+				WRAPPER_EXTENSION = bundle;
 			};
-			name = Release;
+			name = Debug;
 		};
-		FEBECE458296164F79DF449D3B0C442D /* Release */ = {
+		FD03382FDC96F2E063E946785BF8693F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8CF17F22495BC41987A8A792CC7B85FA /* Pods-DebugMenuUserDefaultsBrowser_Tests.release.xcconfig */;
+			baseConfigurationReference = 15F27B8700DC5ED5A19677FD1964037E /* DebugHead.xcconfig */;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-DebugMenuUserDefaultsBrowser_Tests/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/DebugHead/DebugHead-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/DebugHead/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-DebugMenuUserDefaultsBrowser_Tests/Pods-DebugMenuUserDefaultsBrowser_Tests.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_DebugMenuUserDefaultsBrowser_Tests;
+				MODULEMAP_FILE = "Target Support Files/DebugHead/DebugHead.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = DebugHead;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
 /* End XCBuildConfiguration section */
 
@@ -1896,8 +1924,8 @@
 		0BE146D0C5ABE4AFB0799D2210AAD7E9 /* Build configuration list for PBXNativeTarget "TAKKitSwift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A991A3A8CF11EE825D864EA5748A7AC0 /* Debug */,
-				0CE4A7F12607778BB9155660163D339B /* Release */,
+				0DDD0E7CA985EB4A849F553297DD87B5 /* Debug */,
+				C7ADED5F50ABDF7E4297CBF7D8E5FD51 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1905,8 +1933,8 @@
 		0DDB3B700AC7BA93AF0E39D8AAA68938 /* Build configuration list for PBXNativeTarget "Pods-DebugMenuUserDefaultsBrowser_Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E15AEFBC9DF0B3C7B05C4E9D7D89EF58 /* Debug */,
-				FEBECE458296164F79DF449D3B0C442D /* Release */,
+				4C5F27CC3F8D535B0D6F78393B3AB84F /* Debug */,
+				2BAE427012A0E5887540D2A55CCA62C2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1923,8 +1951,8 @@
 		6CF003C6182D01B8C50B01169E42F4D2 /* Build configuration list for PBXNativeTarget "BugImageCreator" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				37F4C9AEB4A9BAF1D5541596BF1648FC /* Debug */,
-				2311BD59AE8E0972A3F07C198E9EF595 /* Release */,
+				6D6564877460FFDD6D8A210374CF9738 /* Debug */,
+				9A5FDACE47C34D5FC72ED0B518E3B47D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1932,8 +1960,8 @@
 		7F4FD9BB3613A0A90E3B33448A0BC97F /* Build configuration list for PBXNativeTarget "DebugHead" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DFD17F39D7E1726ABB2280D991D47385 /* Debug */,
-				FCA80F0072596B1EABF8A2795EB2DD1C /* Release */,
+				FD03382FDC96F2E063E946785BF8693F /* Debug */,
+				E53B8FC5990E996E0DE5D73E659224EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1959,8 +1987,8 @@
 		AF0B755BDF9AB4033A19AA8E2178127A /* Build configuration list for PBXNativeTarget "DebugMenuUserDefaultsBrowser" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E10DD0DFFCF666AC2285A6259EA8AAF5 /* Debug */,
-				293B8AD53702600ABF50BB9A1BC7C331 /* Release */,
+				BC2DD6566A841A61DEE2194EB90778BF /* Debug */,
+				1E9C56EA483B2737A226F9F38A16F39A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1968,8 +1996,8 @@
 		B7342F754FFA736F6388B3126701FA71 /* Build configuration list for PBXNativeTarget "STTwitter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DCEDE3CDB9CC646ABC77BBDF85D19C4A /* Debug */,
-				3D608DF52A74503F13B3DA7ED39A25A6 /* Release */,
+				2A7914C65B8C94070BEB18836A03B223 /* Debug */,
+				89C474159D74CC3AA2F89EBF029A4077 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1977,8 +2005,8 @@
 		E210A720C941001F08E90B67910A557A /* Build configuration list for PBXNativeTarget "Pods-DebugMenuUserDefaultsBrowser_Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				52A96E3F2B5A2836B33579387662E156 /* Debug */,
-				FD8B05C6CFFB963D52269468536AAA28 /* Release */,
+				A09DA5050EDFB805EE7E5BDAA7C6CE5C /* Debug */,
+				6FD1D5B1DCC9BC2B585DAECEA5239187 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

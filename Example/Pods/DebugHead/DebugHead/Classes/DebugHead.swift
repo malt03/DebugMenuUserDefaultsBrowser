@@ -10,13 +10,14 @@ import UIKit
 import BugImageCreator
 
 open class DebugHead: BugImageView {
-  open static let sharedInstance = DebugHead.instance()
+  open static let shared = DebugHead.instance()
 
   open func prepare(
     menuClasses m: [DebugMenu.Type],
     center c: CGPoint = CGPoint(x: UIScreen.main.bounds.size.width - 50, y: UIScreen.main.bounds.size.height - 50),
     sorting: Bool = true,
-    footerView fv: UIView? = nil
+    footerView fv: UIView? = nil,
+    openImmediately: Bool = false
   ) {
     center = c
     let screenSize = UIScreen.main.bounds.size
@@ -32,6 +33,12 @@ open class DebugHead: BugImageView {
     
     if sorting {
       menuClasses.sort { $0.debugMenuDangerLevel.rawValue < $1.debugMenuDangerLevel.rawValue }
+    }
+    
+    if openImmediately {
+      DispatchQueue.main.async { [weak self] in
+        self?.openDebugMenu()
+      }
     }
   }
   
@@ -57,23 +64,23 @@ open class DebugHead: BugImageView {
     fatalError("init(coder:) has not been implemented")
   }
   
-  fileprivate static func instance() -> DebugHead {
+  private static func instance() -> DebugHead {
     return DebugHead()
   }
   
-  fileprivate static var bundle: Bundle {
+  private static var bundle: Bundle {
     return Bundle(path: Bundle(for: DebugHead.self).path(forResource: "DebugHead", ofType: "bundle")!)!
   }
 
-  fileprivate var menuClasses = [DebugMenu.Type]()
-  fileprivate var footerView: UIView?
-  fileprivate var ratioCenter = CGPoint.zero
+  private var menuClasses = [DebugMenu.Type]()
+  private var footerView: UIView?
+  private var ratioCenter = CGPoint.zero
   
-  fileprivate var keyWindow: UIWindow? {
+  private var keyWindow: UIWindow? {
     return UIApplication.shared.keyWindow
   }
   
-  @objc fileprivate func panned(_ recognizer: UIPanGestureRecognizer) {
+  @objc private func panned(_ recognizer: UIPanGestureRecognizer) {
     frame.origin.x += recognizer.translation(in: self).x
     frame.origin.y += recognizer.translation(in: self).y
     recognizer.setTranslation(.zero, in: self)
@@ -81,7 +88,11 @@ open class DebugHead: BugImageView {
     ratioCenter = CGPoint(x: center.x / screenSize.width, y: center.y / screenSize.height)
   }
   
-  @objc fileprivate func tapped(_ recognizer: UITapGestureRecognizer) {
+  @objc private func tapped(_ recognizer: UITapGestureRecognizer) {
+    openDebugMenu()
+  }
+  
+  private func openDebugMenu() {
     let nc = UIStoryboard(name: "DebugMenu", bundle: DebugHead.bundle).instantiateInitialViewController() as! UINavigationController
     let vc = nc.topViewController as! DebugMenuTableViewController
     vc.prepare(menuClasses, footerView)
@@ -89,17 +100,17 @@ open class DebugHead: BugImageView {
     UIView.animate(withDuration: 0.3) { self.alpha = 0 }
   }
   
-  @objc fileprivate func addSubviewOnKeyWindow() {
+  @objc private func addSubviewOnKeyWindow() {
     removeFromSuperview()
     keyWindow?.addSubview(self)
   }
     
-  @objc fileprivate func orientationDidChange() {
+  @objc private func orientationDidChange() {
     let screenSize = UIScreen.main.bounds.size
     center = CGPoint(x: screenSize.width * ratioCenter.x, y: screenSize.height * ratioCenter.y)
   }
   
-  fileprivate func findTopViewController(_ controller: UIViewController?) -> UIViewController? {
+  private func findTopViewController(_ controller: UIViewController?) -> UIViewController? {
     guard let c = controller else { return nil }
     
     switch c {

@@ -29,7 +29,7 @@ public final class KeyboardDisplayObserver {
     center.tak_replaceObserver(self, selector: #selector(keyboardWillHide(_:)), name: Notification.Name.UIKeyboardWillHide)
   }
   
-  public func observe(_ view: UIView? = nil, callback: Callback) {
+  public func observe(_ view: UIView? = nil, callback: @escaping Callback) {
     self.view = view
     self.callback = callback
   }

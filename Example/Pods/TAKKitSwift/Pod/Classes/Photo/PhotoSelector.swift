@@ -28,12 +28,12 @@ public final class PhotoSelector: NSObject {
   fileprivate var success: SuccessCallback?
   fileprivate var failure: FailureCallback?
   
-  public func launchPhotoLibrary(_ allowsEditing: Bool, success: SuccessCallback, failure: FailureCallback? = nil) {
+  public func launchPhotoLibrary(_ allowsEditing: Bool, success: @escaping SuccessCallback, failure: @escaping FailureCallback = { _ in }) {
     self.success = success
     self.failure = failure
     
     guard UIImagePickerController.isSourceTypeAvailable(.photoLibrary) else {
-      failure?(CustomError.photoLibraryIsNotAvailable)
+      failure(CustomError.photoLibraryIsNotAvailable)
       return
     }
     
@@ -51,11 +51,11 @@ public final class PhotoSelector: NSObject {
     }
   }
   
-  public func launchFrontCamera(_ allowsEditing: Bool, success: SuccessCallback, failure: FailureCallback? = nil) {
+  public func launchFrontCamera(_ allowsEditing: Bool, success: @escaping SuccessCallback, failure: @escaping FailureCallback = { _ in }) {
     launchCamera(.front, allowsEditing: allowsEditing, success: success, failure: failure)
   }
   
-  public func launchRearCamera(_ allowsEditing: Bool, success: SuccessCallback, failure: FailureCallback? = nil) {
+  public func launchRearCamera(_ allowsEditing: Bool, success: @escaping SuccessCallback, failure: @escaping FailureCallback = { _ in }) {
     launchCamera(.rear, allowsEditing: allowsEditing, success: success, failure: failure)
   }
 }
@@ -92,21 +92,21 @@ extension PhotoSelector {
 // MARK: - Camera
 
 extension PhotoSelector {
-  fileprivate func launchCamera(_ cameraDevice: UIImagePickerControllerCameraDevice, allowsEditing: Bool, success: SuccessCallback, failure: FailureCallback? = nil) {
+  fileprivate func launchCamera(_ cameraDevice: UIImagePickerControllerCameraDevice, allowsEditing: Bool, success: @escaping SuccessCallback, failure: @escaping FailureCallback = {_ in }) {
     self.success = success
     self.failure = failure
     
     guard UIImagePickerController.isSourceTypeAvailable(.camera) else {
-      failure?(CustomError.cameraIsNotAvailable)
+      failure(CustomError.cameraIsNotAvailable)
       return
     }
     
     guard UIImagePickerController.isCameraDeviceAvailable(cameraDevice) else {
       switch cameraDevice {
       case .front:
-        failure?(CustomError.frontCameraIsNotAvailable)
+        failure(CustomError.frontCameraIsNotAvailable)
       case .rear:
-        failure?(CustomError.rearCameraIsNotAvailable)
+        failure(CustomError.rearCameraIsNotAvailable)
       }
       
       return

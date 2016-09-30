@@ -47,42 +47,42 @@ public struct TAKBlock {
   
   // MARK: - MainThread
   
-  public static func runOnMainThread(_ block: VoidBlock) {
+  public static func runOnMainThread(_ block: @escaping VoidBlock) {
     run(DispatchQueue.main, block: block)
   }
   
-  public static func runOnMainThread(_ delay: Double, block: VoidBlock) {
+  public static func runOnMainThread(_ delay: Double, block: @escaping VoidBlock) {
     run(DispatchQueue.main, delay: delay, block: block)
   }
   
   // MARK: - Background
   
-  public static func runInBackground(_ block: VoidBlock) {
+  public static func runInBackground(_ block: @escaping VoidBlock) {
     run(.utility, block: block)
   }
   
-  public static func runInBackground(_ delay: Double, block: VoidBlock) {
+  public static func runInBackground(_ delay: Double, block: @escaping VoidBlock) {
     run(.utility, delay: delay, block: block)
   }
   
   // MARK: - Queue
   
-  public static func run(_ queue: DispatchQueue, block: VoidBlock) {
+  public static func run(_ queue: DispatchQueue, block: @escaping VoidBlock) {
     queue.async(execute: block)
   }
   
-  public static func run(_ queue: DispatchQueue, delay: Double, block: VoidBlock) {
+  public static func run(_ queue: DispatchQueue, delay: Double, block: @escaping VoidBlock) {
     let d = Int64(delay * Double(NSEC_PER_SEC))
     queue.asyncAfter(deadline: DispatchTime.now() + Double(d) / Double(NSEC_PER_SEC), execute: block)
   }
   
   // MARK: - QOS
   
-  public static func run(_ qos: Qos, block: VoidBlock) {
+  public static func run(_ qos: Qos, block: @escaping VoidBlock) {
     qos.queue.async(execute: block)
   }
   
-  public static func run(_ qos: Qos,  delay: Double, block: VoidBlock) {
+  public static func run(_ qos: Qos,  delay: Double, block: @escaping VoidBlock) {
     let d = Int64(delay * Double(NSEC_PER_SEC))
     qos.queue.asyncAfter(deadline: DispatchTime.now() + Double(d) / Double(NSEC_PER_SEC), execute: block)
   }

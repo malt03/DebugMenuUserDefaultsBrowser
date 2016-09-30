@@ -15,7 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   var window: UIWindow?
 
   func applicationDidFinishLaunching(_ application: UIApplication) {
-    DebugHead.sharedInstance.prepare(menuClasses: [DebugMenuUserDefaultsBrowserViewController.self])
+    DebugHead.shared.prepare(menuClasses: [DebugMenuUserDefaultsBrowserViewController.self])
   }
 }
 

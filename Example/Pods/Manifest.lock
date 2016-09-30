@@ -1,62 +1,39 @@
 PODS:
-  - BugImageCreator (0.4.0-beta1)
-  - DebugHead (0.2.0-beta1):
-    - BugImageCreator (~> 0.4.0-beta1)
-  - DebugMenuUserDefaultsBrowser (0.1.0):
-    - DebugHead (~> 0.2.0-beta1)
+  - BugImageCreator (0.4.0)
+  - DebugHead (0.2.0):
+    - BugImageCreator (~> 0.4.0)
+  - DebugMenuUserDefaultsBrowser (0.2.0-beta1):
+    - DebugHead (~> 0.2.0)
     - TAKKitSwift (~> 3.0.0)
   - STTwitter (0.2.5)
-  - TAKKitSwift (3.0.0):
-    - TAKKitSwift/Core (= 3.0.0)
-    - TAKKitSwift/Photo (= 3.0.0)
-    - TAKKitSwift/Twitter (= 3.0.0)
-    - TAKKitSwift/UserDefaults (= 3.0.0)
-  - TAKKitSwift/Core (3.0.0)
-  - TAKKitSwift/Photo (3.0.0):
+  - TAKKitSwift (3.0.1):
+    - TAKKitSwift/Core (= 3.0.1)
+    - TAKKitSwift/Photo (= 3.0.1)
+    - TAKKitSwift/Twitter (= 3.0.1)
+    - TAKKitSwift/UserDefaults (= 3.0.1)
+  - TAKKitSwift/Core (3.0.1)
+  - TAKKitSwift/Photo (3.0.1):
     - TAKKitSwift/Core
-  - TAKKitSwift/Twitter (3.0.0):
+  - TAKKitSwift/Twitter (3.0.1):
     - STTwitter
     - TAKKitSwift/Core
-  - TAKKitSwift/UserDefaults (3.0.0):
+  - TAKKitSwift/UserDefaults (3.0.1):
     - TAKKitSwift/Core
 
 DEPENDENCIES:
-  - BugImageCreator (from `https://github.com/malt03/BugImageCreator.git`, tag `0.4.0-beta1`)
-  - DebugHead (from `https://github.com/malt03/DebugHead.git`, tag `0.2.0-beta1`)
   - DebugMenuUserDefaultsBrowser (from `../`)
-  - TAKKitSwift (from `https://github.com/taka0125/TAKKitSwift.git`, branch `swift-3.0`)
 
 EXTERNAL SOURCES:
-  BugImageCreator:
-    :git: https://github.com/malt03/BugImageCreator.git
-    :tag: 0.4.0-beta1
-  DebugHead:
-    :git: https://github.com/malt03/DebugHead.git
-    :tag: 0.2.0-beta1
   DebugMenuUserDefaultsBrowser:
     :path: "../"
-  TAKKitSwift:
-    :branch: swift-3.0
-    :git: https://github.com/taka0125/TAKKitSwift.git
-
-CHECKOUT OPTIONS:
-  BugImageCreator:
-    :git: https://github.com/malt03/BugImageCreator.git
-    :tag: 0.4.0-beta1
-  DebugHead:
-    :git: https://github.com/malt03/DebugHead.git
-    :tag: 0.2.0-beta1
-  TAKKitSwift:
-    :commit: b5d887f750fd398e83aab9fc58738c697f9a0060
-    :git: https://github.com/taka0125/TAKKitSwift.git
 
 SPEC CHECKSUMS:
-  BugImageCreator: 60626f7dd94624d1957318795bd51aa36ff8e8a1
-  DebugHead: 6545b1c1766a548eaa9ae34a4b8ab0afe5da8607
-  DebugMenuUserDefaultsBrowser: aebc41180aa2ca201f0eb1a90130c46e3eacf978
+  BugImageCreator: 6d20d5c1989de88cd43367e0caa5f1f965acd6a5
+  DebugHead: 40b08471e6788ec9201531608ee3665971b7e2f9
+  DebugMenuUserDefaultsBrowser: e6b19ddb24dca3ab936db36b6edcfbf3d0148d8d
   STTwitter: 5c157e8dcb4f0e4cf5b4374393021b7d7b7fd497
-  TAKKitSwift: c0d0c40fd5e27304d7bfee346b3ac6176be144a6
+  TAKKitSwift: 984d211c454af8a6ba5518e3137841ba5979a8a6
 
-PODFILE CHECKSUM: 5a0c094bdf815c100fc68a77b63e4a1b7cf8f943
+PODFILE CHECKSUM: 803186d534dcd8fa8b418367e3404d68987d15c3
 
-COCOAPODS: 1.1.0.beta.1
+COCOAPODS: 1.1.0.rc.2
