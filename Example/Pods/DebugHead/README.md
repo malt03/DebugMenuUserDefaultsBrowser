@@ -1,11 +1,17 @@
 # DebugHead
 
 [![Platform](https://img.shields.io/cocoapods/p/DebugHead.svg?style=flat)](http://cocoapods.org/pods/DebugHead)
-![Language](https://img.shields.io/badge/language-Swift%203.0-orange.svg)
+![Language](https://img.shields.io/badge/language-Swift%203.1-orange.svg)
 [![CocoaPods](https://img.shields.io/cocoapods/v/DebugHead.svg?style=flat)](http://cocoapods.org/pods/DebugHead)
 ![License](https://img.shields.io/github/license/malt03/DebugHead.svg?style=flat)
 
 ![Screenshot](https://raw.githubusercontent.com/malt03/DebugHead/master/Screenshot.gif)
+
+## About DebugHead
+
+DebugHead is a library that arranges buttons that display the debug menu on the screen.
+You can also move the button by dragging it.
+You can also add menu functions yourself.
 
 ## Example
 
@@ -14,6 +20,11 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 ## Usage
 
 ### Initialize
+
+Specify the class of the menu you want to display first.
+DebugHead is displayed when prepare is called.
+<p style='color:red'>Please do not call in production environment.</p>
+
 ```swift
 func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
   DebugHead.sharedInstance.prepare(menuClasses: [DebugMenuExit.self, DebugMenuHideDebugHead.self/*, and your plugins */])
@@ -21,6 +32,9 @@ func application(application: UIApplication, didFinishLaunchingWithOptions launc
 ```
 
 ### To Create Plugins
+
+You can create menus by conforming to the DebugMenu protocol.
+
 ```swift
 public class DebugMenuFoo: DebugMenu {
   public static let debugMenuTitle = "Title"
@@ -31,8 +45,10 @@ public class DebugMenuFoo: DebugMenu {
     return nil // If return a UIViewController instance, it will show.
   }
 }
-
 ```
+
+### Other Features
+- You can remove the head with force touch.
 
 ## Built-in Plugins
 - DebugMenuHideDebugHead
@@ -41,6 +57,7 @@ public class DebugMenuFoo: DebugMenu {
 ## Recommended Plugins
 - [DebugMenuUserDefaultsBrowser](https://cocoapods.org/pods/DebugMenuUserDefaultsBrowser)
 - [DebugMenuGPUImageDumper](https://cocoapods.org/pods/DebugMenuGPUImageDumper)
+- [DebugMenuFileBrowser](http://cocoapods.org/pods/DebugMenuFileBrowser)
 
 ## Installation
 

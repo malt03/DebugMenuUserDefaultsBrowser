@@ -1,23 +1,23 @@
 PODS:
-  - BugImageCreator (0.4.0)
-  - DebugHead (0.2.0):
-    - BugImageCreator (~> 0.4.0)
-  - DebugMenuUserDefaultsBrowser (0.2.0-beta1):
-    - DebugHead (~> 0.2.0)
-    - TAKKitSwift (~> 3.0.0)
-  - STTwitter (0.2.5)
-  - TAKKitSwift (3.0.1):
-    - TAKKitSwift/Core (= 3.0.1)
-    - TAKKitSwift/Photo (= 3.0.1)
-    - TAKKitSwift/Twitter (= 3.0.1)
-    - TAKKitSwift/UserDefaults (= 3.0.1)
-  - TAKKitSwift/Core (3.0.1)
-  - TAKKitSwift/Photo (3.0.1):
+  - BugImageCreator (1.0.0)
+  - DebugHead (1.1.1):
+    - BugImageCreator (~> 1.0.0)
+  - DebugMenuUserDefaultsBrowser (0.2.0):
+    - DebugHead (>= 1.0.0)
+    - TAKKitSwift (>= 3.1.0)
+  - STTwitter (0.2.6)
+  - TAKKitSwift (3.1.0):
+    - TAKKitSwift/Core (= 3.1.0)
+    - TAKKitSwift/Photo (= 3.1.0)
+    - TAKKitSwift/Twitter (= 3.1.0)
+    - TAKKitSwift/UserDefaults (= 3.1.0)
+  - TAKKitSwift/Core (3.1.0)
+  - TAKKitSwift/Photo (3.1.0):
     - TAKKitSwift/Core
-  - TAKKitSwift/Twitter (3.0.1):
+  - TAKKitSwift/Twitter (3.1.0):
     - STTwitter
     - TAKKitSwift/Core
-  - TAKKitSwift/UserDefaults (3.0.1):
+  - TAKKitSwift/UserDefaults (3.1.0):
     - TAKKitSwift/Core
 
 DEPENDENCIES:
@@ -28,11 +28,11 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  BugImageCreator: 6d20d5c1989de88cd43367e0caa5f1f965acd6a5
-  DebugHead: 40b08471e6788ec9201531608ee3665971b7e2f9
-  DebugMenuUserDefaultsBrowser: e6b19ddb24dca3ab936db36b6edcfbf3d0148d8d
-  STTwitter: 5c157e8dcb4f0e4cf5b4374393021b7d7b7fd497
-  TAKKitSwift: 984d211c454af8a6ba5518e3137841ba5979a8a6
+  BugImageCreator: 7b33b0fad9a8764ce2da02a0d69b1acfe2ee6360
+  DebugHead: f2d4c19ff2ccc15cedb7c4a3a6536fa54a952738
+  DebugMenuUserDefaultsBrowser: e0963eead6f32a31bb80f6d3eaf7596b3b79c4d3
+  STTwitter: 30ee2f79eff78c3d633a1edc869e97db9c9ead59
+  TAKKitSwift: 9d803c6f4f1e35d9889f482b8ad03022b67adde4
 
 PODFILE CHECKSUM: 803186d534dcd8fa8b418367e3404d68987d15c3
 

@@ -1,6 +1,6 @@
 {
   "name": "DebugMenuUserDefaultsBrowser",
-  "version": "0.2.0-beta1",
+  "version": "0.2.0",
   "summary": "Easy to browse UserDefaults values.",
   "description": "You can browse UserDefaults values with DebugHead.",
   "homepage": "https://github.com/malt03/DebugMenuUserDefaultsBrowser",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/malt03/DebugMenuUserDefaultsBrowser.git",
-    "tag": "0.2.0-beta1"
+    "tag": "0.2.0"
   },
   "platforms": {
     "ios": "8.0"
@@ -21,10 +21,10 @@
   "source_files": "DebugMenuUserDefaultsBrowser/Classes/**/*",
   "dependencies": {
     "TAKKitSwift": [
-      "~> 3.0.0"
+      ">= 3.1.0"
     ],
     "DebugHead": [
-      "~> 0.2.0"
+      ">= 1.0.0"
     ]
   }
 }
