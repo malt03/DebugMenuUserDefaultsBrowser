@@ -4,7 +4,7 @@ This pod was created with [TAKKitSwift](https://cocoapods.org/pods/TAKKitSwift).
 I am respecting Takahiro Ooishi.
 
 [![Platform](https://img.shields.io/cocoapods/p/DebugMenuUserDefaultsBrowser.svg?style=flat)](http://cocoapods.org/pods/DebugMenuUserDefaultsBrowser)
-![Language](https://img.shields.io/badge/language-Swift%203.0-orange.svg)
+![Language](https://img.shields.io/badge/language-Swift%203.1-orange.svg)
 [![CocoaPods](https://img.shields.io/cocoapods/v/DebugMenuUserDefaultsBrowser.svg?style=flat)](http://cocoapods.org/pods/DebugMenuUserDefaultsBrowser)
 ![License](https://img.shields.io/github/license/malt03/DebugMenuUserDefaultsBrowser.svg?style=flat)
 
